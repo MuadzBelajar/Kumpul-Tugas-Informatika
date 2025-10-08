@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tugas Pop Up JavaScript</title>
+</head>
+<body>
+<script>
+
+    alert("Anda yakin mau masuk?");
+    alert("Yakin banget masuk?");
+
+    const nilai = prompt("Input nilai kamu disini:");
+    const nama = prompt("Input nama kamu disini:");
+
+
+    const examValue = parseInt(nilai);
+
+    let keterangan = "";
+
+    if (examValue >= 91) {
+        keterangan = "Sangat Kompeten";
+    } else if (examValue >= 80) {
+        keterangan = "Kompeten";
+    } else if (examValue >= 61) {
+        keterangan = "Cukup Kompeten";
+    } else if (examValue >= 0) {
+        keterangan = "Kurang Kompeten";
+    } else {
+        keterangan = "Nilai tidak valid";
+    }
+
+    alert("Hai " + nama + ", nilai kamu adalah " + examValue + " (" + keterangan + ")");
+
+    document.write("<h2>Hai " + nama + "!</h2>");
+    document.write("<p>Nilai kamu adalah: " + examValue + "</p>");
+    document.write("<p>Keterangan: <b>" + keterangan + "</b></p>");
+    
+</script>
+</body>
+</html>

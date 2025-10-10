@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Masak-Masak Telur</title>
+</head>
+<body>
+<script>
+    alert("Mari mulai memasak olahan telur!");
+    alert("Let's GO!");
+    alert("Siapkan telur yang akan diolah");
+    alert("Tentukan telurnya akan diolah seperti apa");
+
+    let jenistelur = prompt("Kamu mau masak telur apa? (orak arik/ceplok/rebus)");
+
+    if (jenistelur == "orak arik") {
+        alert("1. Pecahkan telur ke dalam wadah");
+        alert("2. Kocok telur dan tambahkan bumbu sesuai selera");
+        alert("3. Panaskan penggorengan");
+        alert("4. Masukkan kocokan telur ke penggorengan yang telah dipanaskan");
+        alert("5. Aduk-aduk hingga menjadi orak arik");
+        alert("Siap untuk dihidangkan!");
+        if (confirm("Lihat hasil masakanmu?")) {
+            document.write("<h2>Telur Orak Arik 🍳 Sudah Jadi!</h2>");
+            document.write("<img src='Telur orak-arik.jpg' width='400' alt='Telur Orak Arik'>");
+        }
+    }
+
+    else if (jenistelur == "ceplok") {
+        alert("1. Panaskan penggorengan yang telah diisi minyak");
+        alert("2. Pecahkan telur di atas penggorengan");
+        alert("3. Tunggu hingga matang");
+        alert("Siap untuk dihidangkan!");
+        if (confirm("Lihat hasil masakanmu?")) {
+            document.write("<h2>Telur Ceplok 🍳 Sudah Jadi!</h2>");
+            document.write("<img src='Telur ceplok.jpg' width='400' alt='Telur Ceplok'>");
+        }
+    }
+
+    else if (jenistelur == "rebus") {
+        alert("1. Didihkan air di dalam panci");
+        alert("2. Masukkan telur utuh ke dalam panci");
+        alert("3. Tunggu beberapa menit sampai telurnya matang");
+        alert("Siap untuk dihidangkan!");
+        if (confirm("Lihat hasil masakanmu?")) {
+            document.write("<h2>Telur Rebus 🥚 Sudah Jadi!</h2>");
+            document.write("<img src='Telur rebus.jpg' width='400' alt='Telur Rebus'>");
+        }
+    }
+
+    else {
+        alert("Jenis telur tidak valid!");
+    }
+</script>
+</body>
+</html>

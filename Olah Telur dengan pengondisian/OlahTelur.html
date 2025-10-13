@@ -1,8 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <title>Masak-Masak Telur</title>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #fff6e5, #ffe6cc);
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #ff9900;
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px #c17800;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 28px;
+            margin-top: 40px;
+        }
+
+        img {
+            width: 350px;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            font-size: 18px;
+            color: #444;
+            margin-top: 10px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 16px;
+            color: #666;
+        }
+
+        button {
+            background-color: #ff9900;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e68a00;
+        }
+    </style>
 </head>
 <body>
 <script>
@@ -21,8 +83,10 @@
         alert("5. Aduk-aduk hingga menjadi orak arik");
         alert("Siap untuk dihidangkan!");
         if (confirm("Lihat hasil masakanmu?")) {
-            document.write("<h2>Telur Orak Arik 🍳 Sudah Jadi!</h2>");
-            document.write("<img src='Telur orak-arik.jpg' width='400' alt='Telur Orak Arik'>");
+            document.write("<h1>🍳 Telur Orak Arik Sudah Jadi!</h1>");
+            document.write("<img src='Telur orak-arik.jpg' alt='Telur Orak Arik'>");
+            document.write("<p>Lezat, lembut, dan siap disantap bersama nasi hangat!</p>");
+            document.write("<div class='footer'>Terima kasih telah memasak bersama kami! 👩‍🍳</div>");
         }
     }
 
@@ -32,8 +96,10 @@
         alert("3. Tunggu hingga matang");
         alert("Siap untuk dihidangkan!");
         if (confirm("Lihat hasil masakanmu?")) {
-            document.write("<h2>Telur Ceplok 🍳 Sudah Jadi!</h2>");
-            document.write("<img src='Telur ceplok.jpg' width='400' alt='Telur Ceplok'>");
+            document.write("<h1>🍳 Telur Ceplok Sudah Jadi!</h1>");
+            document.write("<img src='Telur ceplok.jpg' alt='Telur Ceplok'>");
+            document.write("<p>Kuning telur meleleh sempurna, nikmat untuk sarapan!</p>");
+            document.write("<div class='footer'>Terima kasih telah memasak bersama kami! 👩‍🍳</div>");
         }
     }
 
@@ -43,8 +109,10 @@
         alert("3. Tunggu beberapa menit sampai telurnya matang");
         alert("Siap untuk dihidangkan!");
         if (confirm("Lihat hasil masakanmu?")) {
-            document.write("<h2>Telur Rebus 🥚 Sudah Jadi!</h2>");
-            document.write("<img src='Telur rebus.jpg' width='400' alt='Telur Rebus'>");
+            document.write("<h1>🥚 Telur Rebus Sudah Jadi!</h1>");
+            document.write("<img src='Telur rebus.jpg' alt='Telur Rebus'>");
+            document.write("<p>Telur rebus sehat dan cocok untuk diet seimbang!</p>");
+            document.write("<div class='footer'>Terima kasih telah memasak bersama kami! 👩‍🍳</div>");
         }
     }
 

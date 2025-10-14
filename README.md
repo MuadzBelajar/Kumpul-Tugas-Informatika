@@ -2,47 +2,200 @@
 
 <h4>1. HELLO WORLD</h4>
 <p>Konsep paling dasar pada pemrograman: program yang menampilkan teks “Hello World” ke layar. Tujuan utamanya adalah memverifikasi lingkungan kerja (browser/editor) dan memahami cara menjalankan kode. Di JavaScript ada beberapa cara menampilkan: console.log() (untuk developer console), alert() (popup), atau output ke dokumen dengan document.write()/DOM.</p> 
+<pre><code>
+&lt;script&gt;
+console.log("Hello World!");
+alert("Hello World!");
+document.write("Hello World!");
+&lt;/script&gt;
+</code></pre>
 
 <h4>2. OPERATOR ARITMATIKA</h4>
 <p>Operator untuk operasi matematika dasar: + (tambah), - (kurang), * (kali), / (bagi), % (modulus/sisa bagi), ** (pangkat). Digunakan pada tipe number. Perlu hati-hati dengan pembagian nol (menghasilkan Infinity atau -Infinity) dan floating point (ketidakakuratan representasi desimal).</p>
+<pre><code>
+&lt;script&gt;
+let a = 10, b = 3;
+document.write(a + b + "&lt;br&gt;"); // 13
+document.write(a - b + "&lt;br&gt;"); // 7
+document.write(a * b + "&lt;br&gt;"); // 30
+document.write(a / b + "&lt;br&gt;"); // 3.3333
+document.write(a % b + "&lt;br&gt;"); // 1
+document.write(a ** b);           // 1000
+&lt;/script&gt;
+</code></pre>
 
 <h4>3. OPERATOR AUGMENTED ASSIGNMENT</h4>
-<P>Singkatan untuk menulis operasi lalu menugaskannya kembali ke variabel: +=, -=, *=, /=, %=. Memperpendek x = x + y menjadi x += y. Berguna untuk memperjelas niat dan mengurangi panjang kode. Perhatikan prioritas operator: x += y * z berarti x = x + (y * z).</P>
+<p>Singkatan untuk menulis operasi lalu menugaskannya kembali ke variabel: +=, -=, *=, /=, %=. Memperpendek x = x + y menjadi x += y.</p>
+<pre><code>
+&lt;script&gt;
+let x = 5;
+x += 3; // 8
+x *= 2; // 16
+document.write("Nilai x sekarang adalah " + x);
+&lt;/script&gt;
+</code></pre>
 
 <h4>4. OPERATOR LOGIKA</h4>
-<P>Digunakan untuk menggabungkan ekspresi boolean: && (AND), || (OR), ! (NOT). Dalam JavaScript operator ini juga melakukan short-circuit evaluation dan mengembalikan nilai operand (bukan selalu boolean) — mis. a || b mengembalikan a jika truthy, kalau tidak b. Penting untuk memahami truthy/falsy (0, "", null, undefined, NaN, false adalah falsy).</P>
+<p>Digunakan untuk menggabungkan ekspresi boolean: && (AND), || (OR), ! (NOT).</p>
+<pre><code>
+&lt;script&gt;
+let a = true, b = false;
+document.write(a && b + "&lt;br&gt;"); // false
+document.write(a || b + "&lt;br&gt;"); // true
+document.write(!a); // false
+&lt;/script&gt;
+</code></pre>
 
 <h4>5. OPERATOR UNARY</h4>
-<P>Operator yang hanya bekerja pada satu operand. Contoh umum: typeof (mengembalikan tipe), ! (negasi), unary + (konversi ke number), unary - (mengubah tanda), ++/-- (increment/decrement). ++/-- memiliki bentuk prefix (++x) dan postfix (x++) yang berbeda hasil/kapan efeknya terjadi.</P>
+<p>Operator yang hanya bekerja pada satu operand seperti typeof, !, ++, dan --.</p>
+<pre><code>
+&lt;script&gt;
+let n = 5;
+document.write(typeof n + "&lt;br&gt;"); // number
+document.write(++n + "&lt;br&gt;"); // 6
+document.write(-n); // -6
+&lt;/script&gt;
+</code></pre>
 
 <h4>6. OPERATOR PEMBANDING</h4>
-<P>Digunakan untuk membandingkan nilai: == (loose equality), === (strict equality), !=, !==, >, <, >=, <=. Di JavaScript disarankan pakai ===/!== untuk menghindari coercion (konversi tipe otomatis) yang bisa menyebabkan hasil tak terduga.</P>
+<p>Digunakan untuk membandingkan nilai: ==, ===, !=, !==, >, <, >=, <=.</p>
+<pre><code>
+&lt;script&gt;
+let angka = 10;
+document.write(angka == "10" + "&lt;br&gt;"); // true
+document.write(angka === "10" + "&lt;br&gt;"); // false
+document.write(angka > 5); // true
+&lt;/script&gt;
+</code></pre>
 
 <h4>7. TIPE DATA ARRAY</h4>
-<P>Array adalah struktur data urutan (indexed) yang menyimpan elemen. Di JS array bersifat dinamis (bisa bertambah) dan dapat menyimpan berbagai tipe dalam satu array. Akses via indeks mulai dari 0. Banyak metode penting: push, pop, shift, unshift, slice, splice, map, filter, reduce.</P>
+<p>Array menyimpan kumpulan data dengan urutan indeks.</p>
+<pre><code>
+&lt;script&gt;
+let buah = ["Apel", "Jeruk", "Mangga"];
+buah.push("Pisang");
+document.write(buah.join(", "));
+&lt;/script&gt;
+</code></pre>
 
 <h4>8. TIPE DATA BOOLEAN</h4>
-<P>Hanya dua nilai: true atau false. Sering dihasilkan dari operator pembanding atau logika. Digunakan untuk pengambilan keputusan (percabangan, loops).</P>
+<p>Tipe data boolean hanya memiliki dua nilai: true dan false.</p>
+<pre><code>
+&lt;script&gt;
+let nilai = 70;
+let lulus = nilai >= 60;
+document.write("Apakah lulus? " + lulus);
+&lt;/script&gt;
+</code></pre>
 
 <h4>9. TIPE DATA NUMBER</h4>
-<P>Menampung angka (integer dan floating point) dalam satu tipe. Semua angka di JS menggunakan format 64-bit floating point (IEEE 754). Perlu hati-hati terhadap presisi desimal; gunakan toFixed, Math.round, atau library untuk presisi tinggi apabila diperlukan. Ada juga BigInt untuk bilangan sangat besar.</P>
+<p>Menampung angka, baik integer maupun desimal.</p>
+<pre><code>
+&lt;script&gt;
+let a = 0.1 + 0.2;
+document.write(a + "&lt;br&gt;"); // 0.30000000000000004
+document.write(a.toFixed(2)); // 0.30
+&lt;/script&gt;
+</code></pre>
 
 <h4>10. TIPE DATA OBJECT</h4>
-<P>Struktur yang menyimpan pasangan kunci-nilai (key-value). Kunci biasanya string (atau Symbol), nilai bisa apa saja (termasuk function → method). Object basis untuk banyak struktur di JS (mis. array, fungsi juga objek). Akses via dot notation atau bracket notation.</P>
+<p>Struktur yang menyimpan pasangan key dan value.</p>
+<pre><code>
+&lt;script&gt;
+let siswa = {
+  nama: "Aldi",
+  umur: 17,
+  jurusan: "RPL"
+};
+document.write(siswa.nama + " berumur " + siswa.umur);
+&lt;/script&gt;
+</code></pre>
 
 <h4>11. TIPE DATA STRING</h4>
-<P>Teks yang diapit tanda kutip ('...', "...", atau template literal `...`). Template literal mendukung interpolasi ${expr} dan multiline. String immutable (operasi menghasilkan string baru).</P>
+<p>Teks yang diapit tanda kutip, bisa menggunakan template literal.</p>
+<pre><code>
+&lt;script&gt;
+let nama = "Rina";
+document.write("Halo " + nama + "&lt;br&gt;");
+document.write(`Selamat datang, ${nama}!`);
+&lt;/script&gt;
+</code></pre>
 
 <h4>12. VARIABLE</h4>
-<P>Nama penyimpanan nilai: var, let, const. var lama, memiliki function-scope dan hoisting; let dan const diperkenalkan ES6, bersifat block-scope. Gunakan const untuk nilai yang tidak akan di-assign ulang; let bila perlu diubah. Nama variabel harus mengikuti aturan identifier.</P>
+<p>Variabel digunakan untuk menyimpan data sementara. Tiga jenis deklarasi: var, let, const.</p>
+<pre><code>
+&lt;script&gt;
+var a = 10;
+let b = 20;
+const c = 30;
+document.write(a + b + c);
+&lt;/script&gt;
+</code></pre>
 
 <h4>13. IF EXPRESSION</h4>
-<P>Struktur percabangan untuk mengeksekusi blok kode berdasarkan kondisi boolean. if pertama dievaluasi; jika false, JavaScript memeriksa else if berikutnya; jika semua false, blok else dijalankan (jika ada). Bisa menangani kondisi kompleks menggunakan operator logika/perbandingan.</P>
+<p>Struktur percabangan untuk menjalankan perintah berdasarkan kondisi tertentu.</p>
+<pre><code>
+&lt;script&gt;
+let nilai = 85;
+if (nilai >= 90) {
+  document.write("Nilai A");
+} else if (nilai >= 75) {
+  document.write("Nilai B");
+} else {
+  document.write("Nilai C");
+}
+&lt;/script&gt;
+</code></pre>
 
-<h4>14. SWICTH</h4>
-<P>Struktur percabangan yang membandingkan satu ekspresi dengan beberapa case nilai. Cocok bila kita memeriksa satu variabel terhadap banyak nilai yang sudah diketahui. Gunakan break untuk menghentikan “fall-through” antar case (kecuali memang ingin bergabung beberapa case).</P>
+<h4>14. SWITCH</h4>
+<p>Struktur percabangan untuk membandingkan satu nilai dengan beberapa kemungkinan.</p>
+<pre><code>
+&lt;script&gt;
+let grade = "B";
+switch (grade) {
+  case "A":
+    document.write("Sangat Baik");
+    break;
+  case "B":
+  case "C":
+    document.write("Baik");
+    break;
+  case "D":
+    document.write("Kurang");
+    break;
+  default:
+    document.write("Tidak Valid");
+}
+&lt;/script&gt;
+</code></pre>
 
 <h4>15. PERBEDAAN ANTARA IF DAN SWITCH</h4>
- <p>Struktur if digunakan ketika kita ingin memeriksa kondisi logika yang kompleks, seperti perbandingan nilai, rentang angka, atau kondisi gabungan yang melibatkan operator logika seperti &&, ||, >, dan <. Kelebihan dari penggunaan if adalah fleksibilitasnya yang tinggi karena bisa digunakan untuk berbagai jenis kondisi. Namun, jika jumlah kondisinya terlalu banyak, struktur if-else bisa menjadi panjang dan sulit dibaca.</p>
-<br>
-<p>struktur switch digunakan untuk membandingkan satu nilai dengan beberapa kemungkinan tetap. Biasanya, switch lebih cocok digunakan ketika kita memiliki satu variabel yang memiliki beberapa pilihan nilai yang pasti, seperti huruf nilai ujian (“A”, “B”, “C”, dan seterusnya), status pengguna, atau menu pilihan. Kelebihan switch adalah tampilannya yang lebih rapi dan mudah dibaca dibandingkan dengan if ketika digunakan untuk banyak kondisi. Namun, switch memiliki keterbatasan karena tidak bisa menangani kondisi logika yang kompleks — ia hanya membandingkan nilai secara langsung.</p>
+<p>Struktur <b>if</b> digunakan ketika kita ingin memeriksa kondisi logika yang kompleks, seperti perbandingan nilai, rentang angka, atau kondisi gabungan yang melibatkan operator logika seperti &&, ||, >, dan <. Kelebihan dari penggunaan if adalah fleksibilitasnya yang tinggi karena bisa digunakan untuk berbagai jenis kondisi. Namun, jika jumlah kondisinya terlalu banyak, struktur if-else bisa menjadi panjang dan sulit dibaca.</p>
+
+<p>Struktur <b>switch</b> digunakan untuk membandingkan satu nilai dengan beberapa kemungkinan tetap. Biasanya, switch lebih cocok digunakan ketika kita memiliki satu variabel yang memiliki beberapa pilihan nilai yang pasti, seperti huruf nilai ujian (“A”, “B”, “C”, dan seterusnya), status pengguna, atau menu pilihan. Kelebihan switch adalah tampilannya yang lebih rapi dan mudah dibaca dibandingkan dengan if ketika digunakan untuk banyak kondisi. Namun, switch memiliki keterbatasan karena tidak bisa menangani kondisi logika yang kompleks — ia hanya membandingkan nilai secara langsung.</p>
+
+<pre><code>
+&lt;script&gt;
+// Contoh penggunaan IF
+let usia = 20;
+if (usia >= 18) {
+  document.write("Dewasa");
+} else {
+  document.write("Anak-anak");
+}
+
+// Contoh penggunaan SWITCH
+let hari = "Senin";
+switch (hari) {
+  case "Senin":
+    document.write("&lt;br&gt;Hari kerja dimulai!");
+    break;
+  case "Sabtu":
+  case "Minggu":
+    document.write("&lt;br&gt;Akhir pekan!");
+    break;
+  default:
+    document.write("&lt;br&gt;Hari biasa.");
+}
+&lt;/script&gt;
+</code></pre>

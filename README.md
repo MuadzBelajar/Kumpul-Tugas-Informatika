@@ -115,7 +115,7 @@ document.write(siswa.nama + " berumur " + siswa.umur);
 <p>Teks yang diapit tanda kutip, bisa menggunakan template literal.</p>
 <pre><code>
 &lt;script&gt;
-let nama = "Rina";
+let nama = "Muadz";
 document.write("Halo " + nama + "&lt;br&gt;");
 document.write(`Selamat datang, ${nama}!`);
 &lt;/script&gt;

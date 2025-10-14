@@ -1,6 +1,6 @@
 <h1>CATATAN</h1>
 
-<h4>Hello word</h4>
+<h4>HELLO WORLD</h4>
 <p>Konsep paling dasar pada pemrograman: program yang menampilkan teks “Hello World” ke layar. Tujuan utamanya adalah memverifikasi lingkungan kerja (browser/editor) dan memahami cara menjalankan kode. Di JavaScript ada beberapa cara menampilkan: console.log() (untuk developer console), alert() (popup), atau output ke dokumen dengan document.write()/DOM.</p> 
 
 <h4>OPERATOR ARITMATIKA</h4>

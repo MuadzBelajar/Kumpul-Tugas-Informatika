@@ -229,7 +229,7 @@ document.write(5 in fruits);             // false
 &lt;/script&gt;
 </code></pre>
 
-<h4>18. OPERATOR TERNARY (? :)</h4>
+<h4>18. OPERATOR TERNARY</h4>
 <p>Operator <b>ternary</b> adalah bentuk singkat dari struktur <b>if-else</b>. Operator ini digunakan untuk membuat keputusan sederhana dalam satu baris kode. Formatnya adalah: <code>kondisi ? hasil_jika_benar : hasil_jika_salah</code>.</p>
 <pre><code>
 &lt;script&gt;
@@ -239,7 +239,7 @@ document.write(hasil); // Lulus
 &lt;/script&gt;
 </code></pre>
 
-<h4>19. OPTIONAL CHAINING (?.)</h4>
+<h4>19. OPTIONAL CHAINING</h4>
 <p><b>Optional Chaining</b> digunakan untuk mengakses properti objek secara aman tanpa menimbulkan error ketika salah satu bagian tidak ada (undefined atau null). Jika jalur yang diakses tidak ada, hasilnya <b>undefined</b> tanpa menghentikan program.</p>
 <pre><code>
 &lt;script&gt;

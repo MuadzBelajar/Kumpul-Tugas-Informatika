@@ -199,3 +199,61 @@ switch (hari) {
 }
 &lt;/script&gt;
 </code></pre>
+
+<h4>16. OPERATOR TYPEOF</h4>
+<p>Operator <b>typeof</b> digunakan untuk memeriksa tipe data dari sebuah nilai atau variabel. Hasilnya berupa string seperti "string", "number", "boolean", "object", dan sebagainya. Operator ini sangat berguna saat kita ingin memastikan tipe data sebelum melakukan operasi tertentu.</p>
+<pre><code>
+&lt;script&gt;
+let nama = "Muadz";
+let umur = 17;
+let aktif = true;
+
+document.write(typeof nama + "&lt;br&gt;");  // string
+document.write(typeof umur + "&lt;br&gt;");  // number
+document.write(typeof aktif);             // boolean
+&lt;/script&gt;
+</code></pre>
+
+<h4>17. OPERATOR IN</h4>
+<p>Operator <b>in</b> digunakan untuk memeriksa apakah sebuah properti ada di dalam objek atau sebuah indeks ada di dalam array. Jika ditemukan, hasilnya <b>true</b>; jika tidak, <b>false</b>. Operator ini membantu untuk mencegah error ketika mencoba mengakses properti yang belum tentu ada.</p>
+<pre><code>
+&lt;script&gt;
+const person = { name: "Rafi", age: 16 };
+
+document.write("name" in person + "&lt;br&gt;");   // true
+document.write("address" in person + "&lt;br&gt;"); // false
+
+const fruits = ["apel", "mangga", "pisang"];
+document.write(1 in fruits + "&lt;br&gt;");  // true
+document.write(5 in fruits);             // false
+&lt;/script&gt;
+</code></pre>
+
+<h4>18. OPERATOR TERNARY (? :)</h4>
+<p>Operator <b>ternary</b> adalah bentuk singkat dari struktur <b>if-else</b>. Operator ini digunakan untuk membuat keputusan sederhana dalam satu baris kode. Formatnya adalah: <code>kondisi ? hasil_jika_benar : hasil_jika_salah</code>.</p>
+<pre><code>
+&lt;script&gt;
+let nilai = 80;
+let hasil = nilai >= 75 ? "Lulus" : "Tidak Lulus";
+document.write(hasil); // Lulus
+&lt;/script&gt;
+</code></pre>
+
+<h4>19. OPTIONAL CHAINING (?.)</h4>
+<p><b>Optional Chaining</b> digunakan untuk mengakses properti objek secara aman tanpa menimbulkan error ketika salah satu bagian tidak ada (undefined atau null). Jika jalur yang diakses tidak ada, hasilnya <b>undefined</b> tanpa menghentikan program.</p>
+<pre><code>
+&lt;script&gt;
+const person = {
+  address: {
+    country: "Indonesia"
+  }
+};
+
+let country = person?.address?.country;
+document.write("&lt;p&gt;" + country + "&lt;/p&gt;"); // Indonesia
+
+// Jika address tidak ada, tidak error, hanya undefined
+const user = {};
+document.write("&lt;p&gt;" + user?.address?.city + "&lt;/p&gt;"); // undefined
+&lt;/script&gt;
+</code></pre>

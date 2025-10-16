@@ -256,12 +256,6 @@ if (data === undefined || data === null) {
 }
 
 document.writeln(`&lt;p&gt;${data}&lt;/p&gt;`); // Hasil: Nilai Default
-
-// Cara singkat dengan ?? 
-data = parameter ?? "Nilai Default";
-
-document.writeln(`&lt;p&gt;${data}&lt;/p&gt;`); // Hasil: Nilai Default
-&lt;/script&gt;
 </code></pre>
 
 <p>

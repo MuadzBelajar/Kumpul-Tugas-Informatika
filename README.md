@@ -200,7 +200,7 @@ switch (hari) {
 &lt;/script&gt;
 </code></pre>
 
-<h4>16. OPERATOR TYPEOF</h4>
+<h4>16. OPERATOR TYPE OF</h4>
 <p>Operator <b>typeof</b> digunakan untuk memeriksa tipe data dari sebuah nilai atau variabel. Hasilnya berupa string seperti "string", "number", "boolean", "object", dan sebagainya. Operator ini sangat berguna saat kita ingin memastikan tipe data sebelum melakukan operasi tertentu.</p>
 <pre><code>
 &lt;script&gt;
@@ -239,7 +239,37 @@ document.write(hasil); // Lulus
 &lt;/script&gt;
 </code></pre>
 
-<h4>19. OPTIONAL CHAINING</h4>
+<h4>19. NULLISH COALESCING</h4>
+<p> Operator <b>Nullish Coalescing (??)</b> digunakan untuk memberikan nilai default ketika suatu variabel bernilai <b>null</b> atau <b>undefined</b>.  
+Berbeda dengan operator logika OR (<b>||</b>), operator ini hanya akan menggantikan nilai <b>null</b> dan <b>undefined</b>, bukan nilai falsy lainnya seperti 0 atau string kosong.  
+Hal ini membuatnya lebih aman ketika kita ingin memberikan nilai cadangan tanpa mengganggu nilai yang sah seperti 0 atau "".
+</p>
+
+<pre><code>
+&lt;script&gt;
+let parameter; // Belum diberi nilai, jadi undefined
+
+// Cara manual tanpa ?? 
+let data = parameter;
+if (data === undefined || data === null) {
+  data = "Nilai Default";
+}
+
+document.writeln(`&lt;p&gt;${data}&lt;/p&gt;`); // Hasil: Nilai Default
+
+// Cara singkat dengan ?? 
+data = parameter ?? "Nilai Default";
+
+document.writeln(`&lt;p&gt;${data}&lt;/p&gt;`); // Hasil: Nilai Default
+&lt;/script&gt;
+</code></pre>
+
+<p>
+Dengan menggunakan <b>??</b>, kita dapat menulis kode lebih singkat dan mudah dibaca.
+</p>
+
+
+<h4>20. OPTIONAL CHAINING</h4>
 <p><b>Optional Chaining</b> digunakan untuk mengakses properti objek secara aman tanpa menimbulkan error ketika salah satu bagian tidak ada (undefined atau null). Jika jalur yang diakses tidak ada, hasilnya <b>undefined</b> tanpa menghentikan program.</p>
 <pre><code>
 &lt;script&gt;

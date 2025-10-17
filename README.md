@@ -372,9 +372,6 @@ Khannedy
 ""
 NOL
 </code></pre>
----
-
-Apakah mau sekalian aku lanjutkan format seperti ini untuk nomor **18 (Operator Ternary)** dan **19 (Operator in)** juga biar nyambung semua?
 
 
 

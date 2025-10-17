@@ -281,3 +281,100 @@ const user = {};
 document.write("&lt;p&gt;" + user?.address?.city + "&lt;/p&gt;"); // undefined
 &lt;/script&gt;
 </code></pre>
+
+<h4>21. FALSY DAN TRUTHY</h4>
+<p><b>Falsy dan Truthy</b> adalah konsep dalam JavaScript di mana setiap nilai dapat dianggap <b>true</b> atau <b>false</b> saat diuji dalam kondisi logika seperti <code>if</code> atau operator logika. Nilai yang dianggap <b>false</b> disebut <b>Falsy</b>, sedangkan nilai lainnya disebut <b>Truthy</b>.</p>
+
+<p><b>Nilai Falsy</b> di JavaScript hanya ada 6:</p>
+<ul>
+  <li>false</li>
+  <li>0</li>
+  <li>"" (string kosong)</li>
+  <li>null</li>
+  <li>undefined</li>
+  <li>NaN</li>
+</ul>
+
+<pre><code>
+&lt;script&gt;
+const dataList = [undefined, null, 0, "", "Halo", [], {}, false, true, NaN];
+
+dataList.forEach((data) =&gt; {
+  if (data) {
+    document.writeln(JSON.stringify(data) + " → TRUE&lt;br&gt;");
+  } else {
+    document.writeln(JSON.stringify(data) + " → FALSE&lt;br&gt;");
+  }
+});
+&lt;/script&gt;
+</code></pre>
+
+<p><b>Hasil:</b></p>
+<pre><code>
+undefined → FALSE
+null → FALSE
+0 → FALSE
+"" → FALSE
+"Halo" → TRUE
+[] → TRUE
+{} → TRUE
+false → FALSE
+true → TRUE
+NaN → FALSE
+</code></pre>
+
+---
+
+<h4>22. FALSY DAN TRUTHY DI NON BOOLEAN</h4>
+<p>Operator logika seperti <b>|| (OR)</b> dan <b>&amp;&amp; (AND)</b> tidak hanya bekerja pada nilai boolean.  
+Mereka juga bisa digunakan untuk mengembalikan nilai <b>non-boolean</b> berdasarkan nilai <b>Truthy</b> dan <b>Falsy</b>.</p>
+
+<pre><code>
+&lt;script&gt;
+console.info("Hello" || "");
+console.info("" || []);
+console.info("0" || "NOL");
+console.info(0 || "NOL");
+console.info(null || "NULL");
+console.info(undefined || "UNDEFINED");
+console.info(0 || false);
+
+const person = {
+  firstName: "",
+  lastName: "Khannedy",
+};
+
+const name = person.firstName || person.lastName;
+console.info(name);
+
+console.info("HELLO" &amp;&amp; "");
+console.info("" &amp;&amp; []);
+console.info("0" &amp;&amp; "NOL");
+&lt;/script&gt;
+</code></pre>
+
+<p><b>Penjelasan:</b></p>
+<ul>
+  <li><b>Operator OR (||)</b> akan mengembalikan nilai pertama yang <b>Truthy</b>.</li>
+  <li><b>Operator AND (&amp;&amp;)</b> akan mengembalikan nilai pertama yang <b>Falsy</b>, atau nilai terakhir jika semua <b>Truthy</b>.</li>
+</ul>
+<pre><code>
+Hasil di console:
+Hello
+[]
+0
+NOL
+NULL
+UNDEFINED
+false
+Khannedy
+""
+""
+NOL
+</code></pre>
+---
+
+Apakah mau sekalian aku lanjutkan format seperti ini untuk nomor **18 (Operator Ternary)** dan **19 (Operator in)** juga biar nyambung semua?
+
+
+

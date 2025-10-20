@@ -282,49 +282,7 @@ document.write("&lt;p&gt;" + user?.address?.city + "&lt;/p&gt;"); // undefined
 &lt;/script&gt;
 </code></pre>
 
-<h4>21. FALSY DAN TRUTHY</h4>
-<p><b>Falsy dan Truthy</b> adalah konsep dalam JavaScript di mana setiap nilai dapat dianggap <b>true</b> atau <b>false</b> saat diuji dalam kondisi logika seperti <code>if</code> atau operator logika. Nilai yang dianggap <b>false</b> disebut <b>Falsy</b>, sedangkan nilai lainnya disebut <b>Truthy</b>.</p>
-
-<p><b>Nilai Falsy</b> di JavaScript hanya ada 6:</p>
-<ul>
-  <li>false</li>
-  <li>0</li>
-  <li>"" (string kosong)</li>
-  <li>null</li>
-  <li>undefined</li>
-  <li>NaN</li>
-</ul>
-
-<pre><code>
-&lt;script&gt;
-const dataList = [undefined, null, 0, "", "Halo", [], {}, false, true, NaN];
-
-dataList.forEach((data) =&gt; {
-  if (data) {
-    document.writeln(JSON.stringify(data) + " → TRUE&lt;br&gt;");
-  } else {
-    document.writeln(JSON.stringify(data) + " → FALSE&lt;br&gt;");
-  }
-});
-&lt;/script&gt;
-</code></pre>
-
-<p><b>Hasil:</b></p>
-<pre><code>
-undefined → FALSE
-null → FALSE
-0 → FALSE
-"" → FALSE
-"Halo" → TRUE
-[] → TRUE
-{} → TRUE
-false → FALSE
-true → TRUE
-NaN → FALSE
-</code></pre>
-
----
-
+<h4>21. FALSY DAN TRUTHY</h4> <p><b>Falsy</b> dan <b>Truthy</b> adalah konsep dalam JavaScript yang menentukan apakah suatu nilai dianggap <code>true</code> atau <code>false</code> ketika digunakan dalam kondisi logika seperti <code>if</code>. Nilai yang dianggap <b>false</b> disebut <b>Falsy</b>, sedangkan nilai lainnya disebut <b>Truthy</b>.</p> <p>Pada contoh di bawah, variabel <code>data</code> belum memiliki nilai (<code>undefined</code>), sehingga dianggap <b>Falsy</b> dan menghasilkan tulisan <b>"FALSE"</b> di layar.</p> <pre><code> &lt;script&gt; let data; if (data) { document.writeln("TRUE"); } else { document.writeln("FALSE"); } &lt;/script&gt; </code></pre> <p>Nilai yang termasuk <b>Falsy</b> antara lain: <code>false</code>, <code>0</code>, <code>""</code> (string kosong), <code>null</code>, <code>undefined</code>, dan <code>NaN</code>. Selain nilai-nilai tersebut dianggap <b>Truthy</b>.</p>
 <h4>22. FALSY DAN TRUTHY DI NON BOOLEAN</h4>
 <p>Operator logika seperti <b>|| (OR)</b> dan <b>&amp;&amp; (AND)</b> tidak hanya bekerja pada nilai boolean.  
 Mereka juga bisa digunakan untuk mengembalikan nilai <b>non-boolean</b> berdasarkan nilai <b>Truthy</b> dan <b>Falsy</b>.</p>

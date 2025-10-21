@@ -331,5 +331,56 @@ Khannedy
 NOL
 </code></pre>
 
+<h4>23. FOR LOOP</h4>
+<p>
+<b>For Loop</b> digunakan untuk melakukan perulangan dengan jumlah yang sudah diketahui. 
+Struktur dasarnya terdiri dari tiga bagian: inisialisasi, kondisi, dan increment/decrement.
+Perulangan akan berhenti jika kondisi tidak lagi terpenuhi.
+</p>
+<pre><code>
+ <script>
+    // Standart Penulisan
+    let counter = 1;
+    for (; counter <= 10; ) {
+      document.writeln(`<p>Perulangan ke ${counter}</p>`);
+      counter++;
+    }
 
+    // Penulisan yang efisien
+    for (let counter = 1; counter <= 10; counter++) {
+      document.writeln(`<p>Perulangan ke ${counter}</p>`);
+    }
+  </script>
+</code></pre>
 
+<h4>24. WHILE LOOP</h4>
+<p>
+<b>While Loop</b> digunakan ketika jumlah perulangan belum diketahui sebelumnya. 
+Selama kondisi bernilai <b>true</b>, blok kode di dalamnya akan terus dijalankan.
+Jika kondisi langsung <b>false</b>, maka perulangan tidak akan dijalankan sama sekali.
+</p>
+<pre><code>
+<script>
+let counter = 1;
+while (counter <= 10 ) {
+document.writeln(`<p> perulangan ke ${counter}<p>`);
+counter++;
+}
+    </script>
+</code></pre>
+
+<h4>25. DO WHILE LOOP</h4>
+<p>
+<b>Do While Loop</b> hampir sama seperti <b>While Loop</b>, namun bedanya blok kode akan dijalankan 
+setidaknya satu kali terlebih dahulu sebelum memeriksa kondisi. 
+Jadi, walaupun kondisi bernilai <b>false</b>, perulangan tetap dijalankan sekali.
+</p>
+<pre><code>
+<script>
+    let counter = 1;
+    do {
+      document.writeln(`<p>Perulangan ke ${counter}</p>`);
+      counter++;
+    } while (counter <= 10);
+  </script>
+</code></pre>

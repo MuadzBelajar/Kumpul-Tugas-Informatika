@@ -6,16 +6,13 @@
 </head>
 <body>
   <script>
-    // Daftar nilai yang akan diuji
-    const dataList = [undefined, null, 0, "", "Halo", [], {}, false, true, NaN];
+    let data = "";
 
-    dataList.forEach((data) => {
-      if (data) {
-        document.writeln(`${JSON.stringify(data)} → TRUE <br>`);
-      } else {
-        document.writeln(`${JSON.stringify(data)} → FALSE <br>`);
-      }
-    });
+    if (data) {
+      document.writeln("TRUE");
+    } else {
+      document.writeln("FALSE");
+    }
   </script>
 </body>
 </html>

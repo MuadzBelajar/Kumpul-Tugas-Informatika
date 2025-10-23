@@ -384,3 +384,59 @@ Jadi, walaupun kondisi bernilai <b>false</b>, perulangan tetap dijalankan sekali
     } while (counter <= 10);
   </script>
 </code></pre>
+
+<h4>26. BREAK</h4>
+<p>
+  <b>Break</b> digunakan untuk menghentikan perulangan secara paksa, 
+  meskipun kondisi loop belum terpenuhi. 
+  Biasanya dipakai saat ingin keluar dari loop lebih awal.
+</p>
+<pre><code>
+ <script>
+    let counter = 1;
+
+    while (true) {
+      document.writeln(`<p>Perulangan ke-${counter}</p>`);
+      counter++;
+
+      if (counter > 10) {
+        break;
+      }
+    }
+  </script>
+</code></pre>
+
+<h4>27. CONTINUE</h4>
+<p>
+  <b>Continue</b> digunakan untuk melewati satu iterasi pada perulangan 
+  dan langsung melanjutkan ke iterasi berikutnya. 
+  Biasanya dipakai untuk <i>skip</i> kondisi tertentu tanpa menghentikan loop.
+</p>
+<pre><code>
+ <script>
+    for (let i = 1; i <= 100; i++) {
+      if (i % 2 === 0) {
+        continue;
+      }
+      document.writeln(`<p>Perulangan Ganjil ${i}</p>`);
+    }
+  </script>
+</code></pre>
+
+<h4>28. LABEL</h4>
+<p>
+  <b>Label</b> digunakan untuk memberi nama pada perulangan (loop), 
+  sehingga kita bisa mengontrol loop mana yang ingin di-<b>break</b> 
+  atau di-<b>continue</b> dari dalam loop bersarang (<i>nested loop</i>).
+</p>
+<pre><code>
+  <script>
+    for (let i = 1; i <= 100; i++) {
+      if (i % 2 === 0) {
+        continue;
+      }
+      document.writeln(`<p>Perulangan Ganjil ${i}</p>`);
+    }
+  </script>
+</code></pre>
+

@@ -430,12 +430,16 @@ Jadi, walaupun kondisi bernilai <b>false</b>, perulangan tetap dijalankan sekali
   atau di-<b>continue</b> dari dalam loop bersarang (<i>nested loop</i>).
 </p>
 <pre><code>
-  <script>
+   <script>
     for (let i = 1; i <= 100; i++) {
       if (i % 2 === 0) {
         continue;
       }
-        
+      document.writeln(`<p>Perulangan Ganjil ${i}</p>`);
+    }
+  </script>
+  </code></pre>
+  
 <h4>29. FOR IN</h4>
 <p>
   <b>For...in</b> digunakan untuk melakukan <i>iterasi</i> terhadap <b>semua properti (key)</b> dalam sebuah objek.

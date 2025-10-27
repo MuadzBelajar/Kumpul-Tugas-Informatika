@@ -435,8 +435,91 @@ Jadi, walaupun kondisi bernilai <b>false</b>, perulangan tetap dijalankan sekali
       if (i % 2 === 0) {
         continue;
       }
-      document.writeln(`<p>Perulangan Ganjil ${i}</p>`);
+        
+<h4>29. FOR IN</h4>
+<p>
+  <b>For...in</b> digunakan untuk melakukan <i>iterasi</i> terhadap <b>semua properti (key)</b> dalam sebuah objek.
+  Setiap kali perulangan berjalan, ia akan mengembalikan nama properti dari objek tersebut.
+</p>
+<pre><code>
+ <script>
+    const person = {
+      firstName: "Rajie",
+      middleName: "Al Qadri",
+      lastName: "Anwar",
+    };
+
+    for (const property in person) {
+      document.writeln(`<p>${property} : ${person[property]}</p>`);
+    }
+
+    const names = ["Rajie", "Al Qadri", "Anwar"];
+    for (const index in names) {
+      document.writeln(`<p>${index} : ${names[index]}</p>`);
     }
   </script>
 </code></pre>
+<p><b>Catatan:</b> 
+Gunakan <code>for...in</code> hanya untuk <b>objek</b>, bukan array. 
+Karena <code>for...in</code> mengembalikan nama properti (key), bukan nilai (value).
+</p>
+
+---
+
+<h4>30. FOR OF</h4>
+<p>
+  <b>For...of</b> digunakan untuk melakukan perulangan pada <b>struktur data iterable</b> 
+  seperti array atau string, dan mengembalikan <b>nilai</b> dari tiap elemen.
+</p>
+<pre><code>
+  <script>
+    const names = ["rajie", "al-qadri", "anwar"];
+    for (const name of names) {
+      document.writeln(`<p>${name}</p>`);
+    }
+
+    const fullName = "rajie al-qadri anwar";
+    for (const character of fullName) {
+      document.writeln(`<p>${character}</p>`);
+    }
+  </script>
+</code></pre>
+<p><b>Catatan:</b>
+<code>for...of</code> cocok untuk <b>array</b> dan <b>string</b>, 
+namun tidak bisa digunakan untuk objek biasa (non-iterable object).
+</p>
+
+<h4>31. WITH STATEMENT</h4>
+<p>
+  <b>With</b> digunakan untuk <b>memperpendek penulisan properti</b> dari sebuah objek.
+  Di dalam blok <code>with</code>, kita bisa langsung mengakses properti tanpa menuliskan nama objeknya.
+</p>
+<pre><code>
+<script>
+    const person = {
+      firstName: "rajie",
+      middleName: "al-qadri",
+      lastName: "anwar",
+    };
+
+    console.info(person.firstName);
+    console.info(person.middleName);
+    console.info(person.lastName);
+
+    const firstName = "Anto";
+    const lastName = "Hadi Indra";
+
+    with (person) {
+      console.info(firstName);
+      console.info(middleName);
+      console.info(lastName);
+    }
+  </script>
+</code></pre>
+<p><b>Catatan:</b>
+Meskipun <code>with</code> membuat kode lebih singkat, 
+penggunaannya <b>tidak disarankan</b> dalam JavaScript modern karena bisa menimbulkan kebingungan 
+jika ada variabel dengan nama sama di luar objek.
+</p>
+
 

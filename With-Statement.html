@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>With Statement</title>
+</head>
+<body>
+  <script>
+    const person = {
+      firstName: "rajie",
+      middleName: "al-qadri",
+      lastName: "anwar",
+    };
+
+    console.info(person.firstName);
+    console.info(person.middleName);
+    console.info(person.lastName);
+
+    const firstName = "Anto";
+    const lastName = "Hadi Indra";
+
+    with (person) {
+      console.info(firstName);
+      console.info(middleName);
+      console.info(lastName);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Sederhana</title>
+</head>
+<body>
+  <script>
+    let choice;
+
+    do {
+      choice = parseInt(prompt(
+        "Menu:\n" +
+        "1. Penjumlahan\n" +
+        "2. Pengurangan\n" +
+        "3. Perkalian\n" +
+        "4. Pembagian\n" +
+        "5. Faktorial\n" +
+        "6. Keluar\n\n" +
+        "Pilih operasi (1–6):"
+      ));
+
+      if (choice >= 1 && choice <= 4) {
+        let num1 = parseFloat(prompt("Masukkan angka pertama:"));
+        let num2 = parseFloat(prompt("Masukkan angka kedua:"));
+
+        while (choice === 4 && num2 === 0) {
+          alert("Pembagi tidak boleh nol! Masukkan angka kedua lagi.");
+          num2 = parseFloat(prompt("Masukkan angka kedua:"));
+        }
+
+        let result;
+        switch (choice) {
+          case 1:
+            result = num1 + num2;
+            break;
+          case 2:
+            result = num1 - num2;
+            break;
+          case 3:
+            result = num1 * num2;
+            break;
+          case 4:
+            result = num1 / num2;
+            break;
+        }
+
+        alert("Hasil: " + result);
+
+      } else if (choice === 5) {
+        let n = parseInt(prompt("Masukkan angka positif untuk faktorial:"));
+        while (n < 0) {
+          alert("Angka tidak boleh negatif!");
+          n = parseInt(prompt("Masukkan angka positif:"));
+        }
+
+        let result = 1;
+        for (let i = 1; i <= n; i++) {
+          result *= i;
+        }
+        alert("Hasil faktorial dari " + n + " adalah " + result);
+
+      } else if (choice !== 6) {
+        alert("Pilihan tidak valid! Silakan pilih 1–6.");
+      }
+
+    } while (choice !== 6);
+
+    alert("Terima kasih telah menggunakan kalkulator sederhana ini!");
+
+  </script>
+</body>
+</html>

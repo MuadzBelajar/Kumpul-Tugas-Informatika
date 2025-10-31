@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Function dalam Function</title>
+</head>
+<body>
+<script>
+  function outer() {
+    function inner() {
+      console.info("Inner");
+    }
+
+    inner();
+    inner();
+  }
+
+  outer();
+  inner(); // Akan error karena inner hanya bisa diakses di dalam outer()
+</script>
+</body>
+</html>
